@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Changelog Component</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            margin: 0;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .Changelog-Container {
+            width: 95%;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .Changelog-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .changelog-timeline {
+            position: absolute;
+            left: 50%;
+            top: 0px;
+            bottom: 0px;
+            width: 2px;
+            background-color: black;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+
+        .changelog-entry {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .changelog-date {
+            font-size: 14px;
+            color: gray;
+            flex: 1;
+            text-align: right;
+            padding-right: 20px;
+            position: relative;
+        }
+
+        .changelog-description {
+            font-size: 16px;
+            flex: 1;
+            text-align: left;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .changelog-entry::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            background-color: black;
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media(max-width: 600px) {
+            .Changelog-Container {
+                width: 100%;
+                padding-left: 30px;
+            }
+
+            .changelog-entry {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .changelog-date,
+            .changelog-description {
+                text-align: left;
+                padding: 5px 0;
+            }
+
+            .changelog-timeline {
+                left: 20px;
+            }
+
+            .changelog-entry::before {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Changelog-Container">
+        <h2><Changelog-title>Changelog</h2>
+        <div class="changelog-entry">
+            <p class="changelog-date">September 3, 2024</p>
+            <hr />
+            <p class="changelog-description"> Announcing Projects on Frontend Roadmap</p>
+        </div>
+        <div class="changelog-entry">
+            <p class="changelog-date">August 28, 2024</p>
+            <p class="changelog-description">Build your learning habits with learning streaks </p>
+        </div>
+        <div class="changelog-entry">
+            <p class="changelog-date">August 25, 2024</p>
+            <p class="changelog-description"> Git and Github roadmap</p>
+        </div>
+        <div class="changelog-entry">
+            <p class="changelog-date">August 22, 2024</p>
+            <p class="changelog-description"> Submit your project solution and get feedback</p>
+        </div>
+        <div class="changelog-entry">
+            <p class="changelog-date">August 15, 2024</p>
+            <p class="changelog-description">Backend Project Ideas </p>
+        </div>
+        <div class="changelog-entry">
+            <p class="changelog-date">August 10, 2024</p>
+            <p class="changelog-description"> Redis roadmap</p>
+        </div>
+        <div class="changelog-entry">
+            <p class="changelog-date">August 1, 2024</p>
+            <p class="changelog-description"> Changelog page to help you stay in the loop</p>
+        </div>
+    </div>
+</body>
+
+</html>
